@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1D1D30;
+    font-size: 1.3rem;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(1, 0.5fr  1.5fr)
+}
+
+.bem-vindo {
+    display: flex;
+    justify-content: center;
+    background: #a5f767 linear-gradient(0.25turn, #043347, #e2f7d3, #a9e27dd3);
+}
+
+.bem-vindo h1 {
+    font-size: 1.4rem;
+
+}
+
+#nav-bar {
+    margin-bottom: 10vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+img.logo{
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 40vh;
+    height: 40vh;
+}
+li {
+    padding:5vh;
+    letter-spacing: 3px;
+}
+ul{
+    text-align: center;
+    background-color: #a5f767;
+}
+.opcoes a,
+ul {
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+.opcoes a:hover {
+    color: #eee;
+    padding-bottom: 2vh;
+    border-bottom: 2px solid #FF5757;
+    transition: all 400ms linear;
+
+}
+/* .opcoes a::after{
+} */
+.fig1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.headline:after {
+content: '|';
+margin-left: 5px;
+opacity: 1;
+animation: flash.7s infinite;   
+}
+@keyframes flash{
+    0%,100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+.fig1 h1,p {
+    width: 70vh;
+    letter-spacing: 2px;
+    color: #eee;
+    align-items: center;
+    font-size: 1.6rem;
+    padding: 5vh;
+    font-family: 'Poppins', sans-serif;
+}
+.imagem{
+    align-items: center;
+   
+}
+.imagem img{
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70vh;
+}
+.fig,
+a {
+    color: #1D1D30;
+} 
+
+#Sobre{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.apresentacao{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+}
+.apresentacao h1{
+    font-family: 'Lato', sans-serif;
+    color: #eee;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+#Conhecimentos {
+    display: grid;
+    grid-template-columns: repeat(1, 0.5fr 1.5fr);
+    height: 100vh;
+    align-items: center;
+}
+
+.conhecimentos {
+    display: grid;
+    background-color: #a5f767;
+    grid-template-columns: repeat(5, 1fr);
+    height: 30vh;
+    margin-right: 10vh;
+
+}
+
+.icons {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; /* Alteração aqui para organizar a imagem e o parágrafo em coluna */
+    align-items: center;
+    justify-content: center;
+}
+
+.icons img {
+    width: 12vh;
+    height: 12vh;
+}
+
+.icons p {
+    width: auto;
+    color: #1D1D30;
+
+}
+.name-container p{
+    color: #FF5757;
+    padding: 15vh;
+}
+/* .icons p::after {
+    display: flex;
+    
+}
+
+.icons:hover p {
+    display: flex;
+    flex-direction: column;
+} */
+.description-container, .name-container {
+    display: none;
+    margin-bottom: 10vh;
+}
+
+.show-description, .show-name {
+
+    padding: 5vh;
+}
+
+.description-container {
+    display: none;
+    width: 100%; /* Largura igual à do #Conhecimentos */
+    height: 100%;
+    background-color: #FF5757;
+    border: 1px solid black;
+    float: left;
+}
+
+.show-description {
+    display: block;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+}
+.description-container h1{
+    font-size: 1.2rem;
+}
+.back-to-top {
+    position: fixed;
+    bottom: 4rem;
+    right: 1rem;
+    background: #a5f767;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 0.1rem solid #FF5757;
+    transform: rotate(-90deg);
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+a.back-to-top {
+    color: #1D1D30;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.back-to-top:hover {
+    background-color: #1D1D30;
+    color: #a5f767;
+}
+
+@media (max-width:800px) {
+    #grid{
+        display: flex;
+        flex-direction: column;
+    }
+    .fig1{
+        display: grid;
+    }
+    .apresentacao h1{
+        height: 100vh;
+        text-align: center;
+    }
+    #Conhecimentos {
+        display: flex;
+        width: 100%;
+        margin-top: 10vh;
+    }
+    .fig1 h1, p {
+        width: auto;
+    }
+    .imagem img{
+        display: block;
+        width: 100%;
+    }
+
+
+}
