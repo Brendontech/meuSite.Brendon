@@ -166,7 +166,7 @@ a {
     display: none;
     width: 100%; /* Largura igual à do #Conhecimentos */
     height: 100%;
-    background-color: #32d9cb;
+    background-color: #a5f767;
     border: 1px solid black;
     float: left;
 }
@@ -176,6 +176,7 @@ a {
 }
 .description-container h1{
     font-size: 1.2rem;
+    font-family:'Poppins', sans-serif
 }
 .back-to-top {
     position: fixed;
